@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <div class="header">
+        <h1>Calculator</h1>
+  </div>
+  <div class="container">
+      
+    <div>
+      <input type="text" id="useinp" placeholder='0' disabled>
+      <input type="text" id="compout" placeholder='0' disabled>
+    </div>
+    <table>
+      <tr>
+        <td  class="element"data-value="(">(</td>
+        <td class="element" data-value=")">)</td>
+        <td onclick="removech()">&lt;-</td>
+        <td  data-value="+" class="signs element">+</td>
+      </tr>
+      <tr>
+        <td class="element" data-value="7">7</td>
+        <td class="element" data-value="8">8</td>
+        <td class="element" data-value="9">9</td>
+        <td data-value="-" class="signs element">-</td>
+      </tr>
+      <tr>
+        <td class="element" data-value="4">4</td>
+        <td  class="element" data-value="5">5</td>
+        <td class="element" data-value="6">6</td>
+        <td data-value="*" class="signs element">*</td>
+      </tr>
+      <tr>
+        <td class="element" data-value="1">1</td>
+        <td class="element" data-value="2">2</td>
+        <td class="element" data-value="3">3</td>
+        <td data-value="/" class="signs element">/</td>
+      </tr>
+      <tr>
+        <td onclick="reset()" class="clear">C</td>
+        <td class="element" data-value="0">0</td>
+        <td class="element" data-value=".">.</td>
+        <td  onclick="execute()"class="equalbtn">=</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
