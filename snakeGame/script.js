@@ -13,7 +13,7 @@ function initial(){
 
    cellSize = 66;
    gameOver = false;
-   score = 5;
+   score = 4;
 
    // create image object for food
    foodImg = new Image();
