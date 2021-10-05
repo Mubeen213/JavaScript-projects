@@ -10,6 +10,21 @@ form.addEventListener('submit', (e) => {
 	checkInputs();
 });
 
+
+//To show error
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message;
+}
+
+//To show success
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
+}
+
 function checkInputs() {
 	// trim to remove the whitespaces
 	const usernameValue = username.value.trim();
@@ -48,20 +63,6 @@ function checkInputs() {
 	} else{
 		setSuccessFor(password2);
 	}
-}
-
-//To show error
-function setErrorFor(input, message) {
-	const formControl = input.parentElement;
-	const small = formControl.querySelector('small');
-	formControl.className = 'form-control error';
-	small.innerText = message;
-}
-
-//To show success
-function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.className = 'form-control success';
 }
 
 // To check if it is a valid email
